@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">学生助手</string>
+    <string name="back">返回</string>
+    <string name="login">登录</string>
+    <string name="studentID">学号</string>
+    <string name="password">密码</string>
+    <string name="VerificationCode">验证码</string>
+    <string name="QueryResults">成绩查询</string>
+    <string name="GPA">绩点：</string>
+</resources>

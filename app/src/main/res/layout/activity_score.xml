@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.cc.studentassistant.activity.ScoreActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_ScoreActivity_titleBar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/gray">
+
+        <ImageView
+            android:id="@+id/iv_ScoreActivity_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/previous" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/QueryResults" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_ScoreActivity_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout_ScoreActivity_titleBar"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学年：" />
+
+        <Spinner
+            android:id="@+id/spn_ScoreActivity_year"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="学期：" />
+
+        <Spinner
+            android:id="@+id/spn_ScoreActivity_term"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content">
+
+        </Spinner>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout_ScoreActivity_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout_ScoreActivity_time"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_ScoreActivity_term"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按学期" />
+
+        <Button
+            android:id="@+id/btn_ScoreActivity_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="按学年" />
+
+        <Button
+            android:id="@+id/btn_ScoreActivity_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="查询全部" />
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lv_ScoreActivity_score"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/relativeLayout_ScoreActivity_GPA"
+        android:layout_below="@+id/linearLayout_ScoreActivity_button">
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_ScoreActivity_GPA"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_ScoreActivity_gpa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/GPA" />
+
+        <TextView
+            android:id="@+id/tv_ScoreActivity_GPA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tv_ScoreActivity_gpa"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/tv_ScoreActivity_excellent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="优秀科目数：" />
+    </RelativeLayout>
+
+</RelativeLayout>
